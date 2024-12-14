@@ -29,6 +29,12 @@ title: "정민의 개발일지"
 email: wjdals8625@naver.com
 author: "@Jeongm2n"
 
+# Page default value
+defaults:
+  home:
+    heading: "정민이의 성장형 개발일지"
+    subheading: "나의 성장일지"
+    banner: "./assets/images/banners/IMG_5229.jpeg"
 
 # Copyright setting
 # You can use any html code, currently below placeholders are available:
