@@ -1,4 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-12-16T13:57:27+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">정민의 개발일지</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>@Jeongm2n</name></author><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/2018/12/07/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-12-07T00:00:00+09:00</published><updated>2018-12-07T00:00:00+09:00</updated><id>http://localhost:4000/jekyll/2018/12/07/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/2018/12/07/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-12-16T15:56:35+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">정민의 개발일지</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>@Jeongm2n</name></author><entry><title type="html">블로그 개설 후 첫 번째 개발일지</title><link href="http://localhost:4000/%EA%B0%9C%EB%B0%9C%EC%9D%BC%EC%A7%80/2024/12/16/%EC%B2%AB%EB%B2%88%EC%A7%B8-%EA%B0%9C%EB%B0%9C%EC%9D%BC%EC%A7%80.html" rel="alternate" type="text/html" title="블로그 개설 후 첫 번째 개발일지" /><published>2024-12-16T00:00:00+09:00</published><updated>2024-12-16T00:00:00+09:00</updated><id>http://localhost:4000/%EA%B0%9C%EB%B0%9C%EC%9D%BC%EC%A7%80/2024/12/16/%EC%B2%AB%EB%B2%88%EC%A7%B8-%EA%B0%9C%EB%B0%9C%EC%9D%BC%EC%A7%80</id><content type="html" xml:base="http://localhost:4000/%EA%B0%9C%EB%B0%9C%EC%9D%BC%EC%A7%80/2024/12/16/%EC%B2%AB%EB%B2%88%EC%A7%B8-%EA%B0%9C%EB%B0%9C%EC%9D%BC%EC%A7%80.html"><![CDATA[<h1 id="첫-번째-개발일지-241216">첫 번째 개발일지 241216</h1>
+
+<p><br /></p>
+
+<p>ruby 언어는 살면서 처음인지라… <br />
+계속 블로그를 운영하려면 이 테마의 구조부터 이해해야 할 것 같아서 테마(?)를 공부해봤음.</p>
+
+<p><br /></p>
+
+<p>일단 네이버 블로그와 벨로그 짬으로 경험해본 결과,<br />
+블로그를 가시성있고 깔끔해보이려면 카테고리를 잘 나눠야하기 때문에 개발일지에 맞는 카테고리를 생성하고자 했음.<br />
+근데 첫 시작부터 쉽지가 않다.<br /></p>
+
+<p>일단 사이트끼리 주고받는 데이터를 관리하는 코드를 이해해야했다. 
+<br />
+<br />
+<br /></p>
+
+<h2 id="공부한-것들">공부한 것들</h2>
+
+<h3 id="1-변수-할당">1. 변수 할당</h3>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="sx">% assign </span><span class="n">keys</span> <span class="o">=</span> <span class="err">어쩌구저쩌구</span> <span class="o">%</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>어쩌구저쩌구를 변수 keys에 할당하겠다는 뜻이다.</p>
+
+<p><br />
+<br /></p>
+
+<h3 id="2-사이드바-설정">2. 사이드바 설정</h3>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="p">{</span><span class="sx">%- if page.sidebar -%}
+    {%- assign sidebar = page.sidebar -%}</span>
+    <span class="p">{</span><span class="sx">%- elsif site.defaults[page.layout].sidebar -%}
+    {%- assign sidebar = site.defaults[page.layout].sidebar -%}</span>
+    <span class="p">{</span><span class="sx">%- elsif layout.sidebar -%}
+    {%- assign sidebar = layout.sidebar -%}</span>
+<span class="p">{</span><span class="sx">%- endif -%}
+
+</span></code></pre></div></div>
+
+<p>이런 코드가 있는데 세 가지 조건에 의해 페이지마다 사이드바의 내용을 다르게 해서 띄우기 위한 코드로 해석했다.</p>
+
+<p><br /></p>
+
+<h4 id="2-1-pagesidebar">2-1. page.sidebar</h4>
+
+<p>페이지 자체에 사이드바가 설정되어 있는 경우</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">---</span>
+<span class="ss">layout: </span><span class="n">post</span>
+<span class="ss">sidebar: </span><span class="n">categories_list</span> 
+<span class="o">---</span>
+</code></pre></div></div>
+
+<p>위와 같이 마크다운 파일 상단에 해당 페이지의 사이드바가 설정되어 있는 경우이다.</p>
+
+<p><br /></p>
+
+<h4 id="2-2-sitedefaults">2-2. site.defaults</h4>
+
+<p>해당 layout에 연결된 _config.yml에 설정된 전역 기본값을 참조한다.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ss">defaults:
+  </span><span class="o">-</span> <span class="ss">scope:
+      path: </span><span class="s2">""</span>
+      <span class="ss">type: </span><span class="s2">"post"</span>
+    <span class="ss">values:
+      sidebar: </span><span class="s2">"default_sidebar"</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h4 id="2-3-layoutsidebar">2-3. layout.sidebar</h4>
+
+<p>해당 레이아웃 파일(_layouts/)에 정의된 변수를 의미한다.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="sx">% assign </span><span class="n">layout</span><span class="p">.</span><span class="nf">sidebar</span> <span class="o">=</span> <span class="s2">"layout_sidebar"</span> <span class="o">%</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="3-liquid-태그와의-충돌-문제-해결">3. Liquid 태그와의 충돌 문제 해결</h3>
+
+<p>백틱 내부에서 Liquid태그 ({% … %}) 를 사용하면 잘릴 수 있음.<br />
+잘리지 않도록 파싱하지 않아도 되는 코드의 윗부분에 Liquid 태그에 raw를, 끝나는 부분에 Liquid 태그에 endraw를 붙여주기!!</p>
+
+<p><br /></p>
+<hr />
+
+<p><br /></p>
+
+<h2 id="마무리">마무리</h2>
+
+<p>ruby 이녀석.. 상당히 어렵다.. 블로그 쓸 때만 깔짝대야겠다..ㅎ</p>
+
+<p>깃허브 블로그 첫 번째 글 작성 완료~~</p>]]></content><author><name>@Jeongm2n</name></author><category term="개발일지" /><summary type="html"><![CDATA[첫 번째 개발일지 241216]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/2018/12/07/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-12-07T00:00:00+09:00</published><updated>2018-12-07T00:00:00+09:00</updated><id>http://localhost:4000/jekyll/2018/12/07/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/2018/12/07/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <p>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
 
@@ -969,6 +1067,4 @@ which you wish to be displayed literally, ex.: `foo`, *bar*, etc.</p>
       <td>lorem ipsum dolor sit amet consectetur</td>
     </tr>
   </tbody>
-</table>]]></content><author><name>Bart Simpson</name></author><category term="junk" /><summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.]]></summary></entry><entry><title type="html">My Example Post</title><link href="http://localhost:4000/junk/2016/08/12/my-example-post.html" rel="alternate" type="text/html" title="My Example Post" /><published>2016-08-12T00:00:00+09:00</published><updated>2016-08-12T00:00:00+09:00</updated><id>http://localhost:4000/junk/2016/08/12/my-example-post</id><content type="html" xml:base="http://localhost:4000/junk/2016/08/12/my-example-post.html"><![CDATA[<p>Eos eu docendi tractatos sapientem, brute option menandri in vix, quando vivendo accommodare te ius. Nec melius fastidii constituam id, viderer theophrastus ad sit, hinc semper periculis cum id. Noluisse postulant assentior est in, no choro sadipscing repudiandae vix. Vis in euismod delenit dignissim. Ex quod nostrum sit, suas decore animal id ius, nobis solet detracto quo te.</p>
-
-<p>No laudem altera adolescens has, volumus lucilius eum no. Eam ei nulla audiam efficiantur. Suas affert per no, ei tale nibh sea. Sea ne magna harum, in denique scriptorem sea, cetero alienum tibique ei eos. Labores persequeris referrentur eos ei.</p>]]></content><author><name>@Jeongm2n</name></author><category term="junk" /><summary type="html"><![CDATA[Eos eu docendi tractatos sapientem, brute option menandri in vix, quando vivendo accommodare te ius. Nec melius fastidii constituam id, viderer theophrastus ad sit, hinc semper periculis cum id. Noluisse postulant assentior est in, no choro sadipscing repudiandae vix. Vis in euismod delenit dignissim. Ex quod nostrum sit, suas decore animal id ius, nobis solet detracto quo te.]]></summary></entry></feed>
+</table>]]></content><author><name>Bart Simpson</name></author><category term="junk" /><summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.]]></summary></entry></feed>
