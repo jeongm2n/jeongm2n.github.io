@@ -1009,6 +1009,119 @@ function googleTranslateElementInit() {
 
 
 <h2 class="post-title">
+        <a class="post-link" href="/baekjoon/2024/12/18/Baekjoon-Q28471.html">
+          [백준] 28471번 W키가 빠진 성원이 자바 풀이
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Dec 18, 2024</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 4 mins</span>
+      </div>
+      <a class="post-excerpt" href="/baekjoon/2024/12/18/Baekjoon-Q28471.html">
+        <p>
+        [백준] 28471번 W키가 빠진 성원이 자바 풀이
+
+
+
+  문제
+  
+
+
+
+
+
+  예제 입출력
+  
+
+
+
+
+
+문제풀이
+처음엔 graph를 돌면서 해당 위치가 ‘.’이면 bfs를 돌려서 해당 점에서 시작했을 때 목적지인 ‘F’로 갈 수 있는지를 판단해서 그런 ‘.’의 개수를 세었다.
+
+
+
+하지만 이렇게 하니 시간초과가 발생했다.
+아마 bfs를 너무 많이 돌려야해서 그런듯.
+
+
+
+그래서 오히려 반대로 목적지인 ‘F’에서 bfs를 돌려서 갈 수 있는 ‘.’의 개수를 카운팅한다.
+
+
+
+
+유의할 점
+
+  원래는 상하좌우, 4방향 대각선 8개의 방향으로 이동할 수 있지만 W가 빠진 (위로 1칸 이동) 문제이기 때문에 위로 ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
         <a class="post-link" href="/%EA%B0%9C%EB%B0%9C%EC%9D%BC%EC%A7%80/2024/12/16/first-development-journal.html">
           블로그 개설 후 첫 번째 개발일지
         </a>
@@ -2317,10 +2430,16 @@ Here’s a useless table:
   <ul>
     <li>
       <a href="/index.html">
-        All<span>15</span>
+        All<span>16</span>
       </a>
     </li>
 
+    
+      <li>
+        <a href="/categories.html#h-baekjoon">
+          baekjoon <span>1</span>
+        </a>
+      </li>
     
       <li>
         <a href="/categories.html#h-example">
