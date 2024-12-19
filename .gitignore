@@ -1,0 +1,10 @@
+# 빌드 파일 제외
+_site/
+.sass-cache/
+.jekyll-metadata
+.bundle/
+
+# OS 관련 파일 제외
+.DS_Store
+Thumbs.db
+
