@@ -31,10 +31,14 @@ author: "@Jeongm2n"
 
 # Page default value
 defaults:
-  home:
-    heading: "정민이의 성장형 개발일지"
-    subheading: "나의 성장일지"
-    banner: "./assets/images/banners/IMG_5229.jpeg"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      heading: "정민이의 성장형 개발일지"
+      subheading: "나의 성장일지"
+      banner: "./assets/images/banners/IMG_5229.jpeg"
+
 
 # Copyright setting
 # You can use any html code, currently below placeholders are available:
@@ -207,12 +211,13 @@ yat:
 # See https://utteranc.es/
 # set follow_site_theme true to make utterances' theme follow the site's
 
-# utterances:
-#   repo: "owner/repo"
-#   issue_term: "title"
-#   label: "utterances comment"
-#   theme: "github-light"
-#   follow_site_theme: true
+utterances: 
+  repo: "jeongm2n/jeongm2n.github.io"
+  issue_term: "pathname"
+  label: "comments"
+  theme: "github-light"
+  follow_site_theme: true
+
 
 # theme: owner/name --> Don't forget to remove/comment the gem-based theme option
 remote_theme: "jeffreytse/jekyll-theme-yat"
