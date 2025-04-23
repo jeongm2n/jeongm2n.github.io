@@ -49,7 +49,7 @@ Github 사이트에서 이미지 레파지토리로 이동한 후, 업로드하�
 
 <br>
 
-<img width="100%" alt="Image" src="https://raw.githubusercontent.com/jeongm2n/blog-images/refs/heads/main/2025%3A04%3A23/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202025-04-23%20%EC%98%A4%ED%9B%84%204.08.11.png?token=GHSAT0AAAAAADCV3OWQ2OW4OZ2VAZ37D6UI2AISMFA" />
+<img width="100%" alt="Image" src="https://raw.githubusercontent.com/jeongm2n/blog-images/refs/heads/main/2025%3A04%3A23/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202025-04-23%20%EC%98%A4%ED%9B%84%204.08.11.png" />
 
 <br>
 
@@ -58,7 +58,7 @@ Github 사이트에서 이미지 레파지토리로 이동한 후, 업로드하�
 <br>
 <br>
 
-<img width="100%" alt="Image" src="https://raw.githubusercontent.com/jeongm2n/blog-images/refs/heads/main/2025%3A04%3A23/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202025-04-23%20%EC%98%A4%ED%9B%84%204.09.05.png?token=GHSAT0AAAAAADCV3OWQ5FHLU5WQUIO63XNK2AISNYA" />
+<img width="100%" alt="Image" src="https://raw.githubusercontent.com/jeongm2n/blog-images/refs/heads/main/2025%3A04%3A23/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202025-04-23%20%EC%98%A4%ED%9B%84%204.09.05.png" />
 
 <br>
 
