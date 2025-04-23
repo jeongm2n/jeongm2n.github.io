@@ -37,7 +37,7 @@ title: "세 번째 개발일지, Github Blog에 이미지 추가하기"
 
 <br>
 
-1. Github에서 new repository로 이미지만 저장하는 저장소를 생성한다.
+1. Github에서 new repository로 이미지만 저장하는 저장소를 생성한다.(Public으로 생성해야 함!!!!)
 2. 본인 컴퓨터에 Git과 클론할 위치로 터미널에서 이동한다.
 3. git clone [본인 레파지토리 url] 명령어를 실행한다.
 4. 블로그에 업로드 할 이미지들을 저장소에 옮긴 후 저장소에 push 한다.
